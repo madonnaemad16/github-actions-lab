@@ -1,6 +1,10 @@
 name: Hello Agile
 
-on: [push]
+on:
+  push:
+    branches: [ dev ] // Trigger the workflow on push to the 'dev' branch
+  pull_request:
+    branches: [ main ] // Trigger the workflow on pull request to the 'main' branch
 
 jobs:
   say_hello:
